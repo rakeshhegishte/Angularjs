@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>
+Angularjs location service
+</title>
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+
+<div ng-app="myLocation" ng-controller = "locCtrl">
+	<p>The url of this page is:</p>
+	<h3>{{myURL}}</h3>
+</div>
+
+<script>
+
+	var app = angular.module('myLocation',[]);
+	app.controller('locCtrl',function($scope,$location){
+		$scope.myURL = $location.absUrl();
+	}); 
+</script>
+</body>
+</html>
